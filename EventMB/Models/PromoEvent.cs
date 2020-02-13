@@ -3,10 +3,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EventMB.Models
 {
-    public class Cliente: Pessoa
+    public class PromoEvent: Pessoa
     {   [Key]
-        public int id_cliente {get;set;}
-        public string tipo{get;set;}
+        public int id_PromoEvent {get;set;}
+        public string nomeFantasia{get;set;}
+        public int inscricaoMuni{get;set;}
+        public int agencia{get;set;}
+        public int conta{get;set;}
+        public int cnpj{get;set;}
+        public string razaoSocial{get;set;}
         public new Pessoa nome;
         [ForeignKey("id_Pessoa")]
         public new Pessoa id_Pessoa;
@@ -17,6 +22,7 @@ namespace EventMB.Models
         public new Pessoa cep;
         public new Pessoa pwd;
         public new Pessoa telefone;
+        
     }
 
 }
